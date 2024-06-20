@@ -4,12 +4,12 @@ class ArticleViewModel {
     private var articles = [Article]()
     
     func fetchArticles(completion: @escaping () -> ()) {
-        APIManager.shared.fetchData(from: Constants.articleUrl.rawValue) { (data: Articles?) in
-            guard let receivedData = data else {
-                print(APIError.noDataError)
+        APIManager.shared.fetchData(from: Constants.articleUrl.rawValue) { data in
+            guard let apiResponse = try? JSONDecoder().decode(Articles.self, from: data) else {
+                print(APIError.decodingError)
                 return
             }
-            self.articles = receivedData.articles
+            self.articles = apiResponse.articles
             completion()
         }
     }

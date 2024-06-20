@@ -5,13 +5,12 @@ class UserViewModel {
     private var users = [User]()
     
     func fetchUsers(completion: @escaping () -> ()) {
-        APIManager.shared.fetchData(from: Constants.userUrl.rawValue) { (data: [User]?) in
-            guard let receivdData = data else {
-                print(APIError.noDataError)
+        APIManager.shared.fetchData(from: Constants.userUrl.rawValue) { data in
+            guard let apiResponse = try? JSONDecoder().decode([User].self, from: data) else {
+                print(APIError.decodingError)
                 return
             }
-            
-            self.users = receivdData
+            self.users = apiResponse
             completion()
         }
     }

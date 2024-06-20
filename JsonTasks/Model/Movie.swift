@@ -10,10 +10,4 @@ struct Movie: Codable {
     let tags: [String]
     let id: String
     let state: String
-    let screenshot: Screenshot
-}
-
-// MARK: - Screenshot
-struct Screenshot: Codable {
-    let normal, thumb, original: String
 }
