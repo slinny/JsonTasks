@@ -8,6 +8,4 @@ struct People: Codable {
     let films, species, vehicles, starships: [String]
     let created, edited: String
     let url: String
-    
-    
 }

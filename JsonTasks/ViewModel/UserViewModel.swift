@@ -4,9 +4,10 @@ class UserViewModel {
     
     private var users = [User]()
     
-    func fetchData(completion: @escaping () -> ()) {
-        APIManager.shared.fetchData(from: Constants.URL.rawValue) { (data: [User]?) in
+    func fetchUsers(completion: @escaping () -> ()) {
+        APIManager.shared.fetchData(from: Constants.userUrl.rawValue) { (data: [User]?) in
             guard let receivdData = data else {
+                print(APIError.noDataError)
                 return
             }
             

@@ -1,29 +1,30 @@
-//
-//  PeopleViewController.swift
-//  JsonTasks
-//
-//  Created by Siran Li on 6/19/24.
-//
-
 import UIKit
 
 class PeopleViewController: UIViewController {
-
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var heightLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
+    
+    private var peopleViewModel = PeopleViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        fetchPeople()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    fileprivate func fetchPeople() {
+        peopleViewModel.fetchPeople {
+            guard self.peopleViewModel.getPeople() != nil else {
+                print(APIError.noDataError)
+                return
+            }
+            DispatchQueue.main.async {
+                self.nameLabel.text = "name: \(self.peopleViewModel.getPeople()!.name)"
+                self.heightLabel.text = "height: \(self.peopleViewModel.getPeople()!.height)"
+                self.genderLabel.text = "gender: \(self.peopleViewModel.getPeople()!.gender)"
+            }
+        }
     }
-    */
-
 }

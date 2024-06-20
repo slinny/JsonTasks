@@ -1,29 +1,40 @@
-//
-//  MealViewController.swift
-//  JsonTasks
-//
-//  Created by Siran Li on 6/19/24.
-//
-
 import UIKit
 
 class MealViewController: UIViewController {
-
+    
+    @IBOutlet weak var mealTable: UITableView!
+    private var mealViewModel = MealViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupTable()
+        fetchMeals()
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension MealViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        mealViewModel.getMeals().count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = mealTable.dequeueReusableCell(withIdentifier: "MealTableViewCell") as? MealTableViewCell else { fatalError("Unable to dequeue MealTableViewCell") }
+        cell.configureMealCell(meal: mealViewModel.getMeals()[indexPath.row])
+        return cell
+    }
+}
+
+extension MealViewController {
+    func setupTable() {
+        mealTable.dataSource = self
+        mealTable.register(UINib(nibName: "MealTableViewCell", bundle: nil), forCellReuseIdentifier: "MealTableViewCell")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func fetchMeals() {
+        mealViewModel.fetchMeals {
+            DispatchQueue.main.async {
+                self.mealTable.reloadData()
+            }
+        }
     }
-    */
-
 }

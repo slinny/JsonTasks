@@ -5,12 +5,12 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var email: UILabel!
-    
-    private var index = 0
-    private var userViewModel = UserViewModel()
+    @IBOutlet weak var stackView: UIStackView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        stackView.spacing = 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -19,13 +19,9 @@ class UserTableViewCell: UITableViewCell {
 }
 
 extension UserTableViewCell {
-    func setIndex(index: Int) {
-        self.index = index
-    }
-    
-    func updateView() {
-        name.text = "name: \(userViewModel.getUsers()[index].name)"
-        username.text = "username: \(userViewModel.getUsers()[index].username)"
-        email.text = "email: \(userViewModel.getUsers()[index].email)"
+    func setupTableCellData(user: User) {
+        name.text = "name: \(user.name)"
+        username.text = "username: \(user.username)"
+        email.text = "email: \(user.email)"
     }
 }

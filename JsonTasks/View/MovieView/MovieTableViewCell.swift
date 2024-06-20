@@ -19,8 +19,7 @@ class MovieTableViewCell: UITableViewCell {
     }
     
     func configureMovieCell(movie: Movie) {
-//        movieImage.fetchAndSetImage(from: movie.screenshot.thumb)
-        movieImage.fetchAndSetImage(from: "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/7a/bd/c0/7abdc0c7-787f-bfa0-b0b8-a844b125040f/111119293129.jpg/60x60bb.jpg")
+        movieImage.fetchAndSetImage(from: movie.screenshot.thumb)
         movieTitle.text = movie.title
         movieDuration.text = "\(movie.duration)"
         movieTags.text = movie.tags[0]

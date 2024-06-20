@@ -18,7 +18,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell") as? HomeTableViewCell else { return HomeTableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell") as? HomeTableViewCell else { fatalError("Unable to dequeue UserTableViewCell") }
         cell.homeCellLabel.text = "go to \(homeViewModel.getButtonTexts(indexPath.row))"
         return cell
     }
@@ -32,13 +32,13 @@ extension HomeViewController: UITableViewDelegate {
         case 0:
             nextViewController = storyboard.instantiateViewController(withIdentifier: "UserViewController") as! UserViewController
         case 1:
-            nextViewController = storyboard.instantiateViewController(withIdentifier: "UserViewController") as! UserViewController
+            nextViewController = storyboard.instantiateViewController(withIdentifier: "PeopleViewController") as! PeopleViewController
         case 2:
-            nextViewController = storyboard.instantiateViewController(withIdentifier: "UserViewController") as! UserViewController
+            nextViewController = storyboard.instantiateViewController(withIdentifier: "MovieViewController") as! MovieViewController
         case 3:
-            nextViewController = storyboard.instantiateViewController(withIdentifier: "UserViewController") as! UserViewController
+            nextViewController = storyboard.instantiateViewController(withIdentifier: "ArticleViewController") as! ArticleViewController
         case 4:
-            nextViewController = storyboard.instantiateViewController(withIdentifier: "UserViewController") as! UserViewController
+            nextViewController = storyboard.instantiateViewController(withIdentifier: "MealViewController") as! MealViewController
         default:
             nextViewController = nil
         }
@@ -53,7 +53,6 @@ extension HomeViewController {
         homeTable.dataSource = self
         homeTable.delegate = self
         homeTable.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeTableViewCell")
+        homeTable.rowHeight = 50
     }
 }
-
-

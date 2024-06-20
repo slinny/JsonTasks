@@ -1,29 +1,44 @@
-//
-//  ArticleViewController.swift
-//  JsonTasks
-//
-//  Created by Siran Li on 6/19/24.
-//
-
 import UIKit
 
 class ArticleViewController: UIViewController {
-
+    
+    @IBOutlet weak var articleTable: UITableView!
+    private var articleViewModel = ArticleViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupTable()
+        fetchArticles()
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension ArticleViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        articleViewModel.getArticles().count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = articleTable.dequeueReusableCell(withIdentifier: "ArticleTableViewCell") as? ArticleTableViewCell else {
+            fatalError("Unable to dequeue ArticleTableViewCell")
+        }
+        cell.configureArticleCell(article: articleViewModel.getArticles()[indexPath.row])
+        return cell
     }
-    */
+}
 
+extension ArticleViewController {
+    func setupTable() {
+        articleTable.dataSource = self
+        articleTable.register(UINib(nibName: "ArticleTableViewCell", bundle: nil), forCellReuseIdentifier: "ArticleTableViewCell")
+        articleTable.rowHeight = 60
+    }
+    
+    func fetchArticles() {
+        articleViewModel.fetchArticles {
+            DispatchQueue.main.async {
+                self.articleTable.reloadData()
+            }
+        }
+    }
 }

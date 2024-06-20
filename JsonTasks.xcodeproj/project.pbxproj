@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9350A4F62C2326D6001AAFA3 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9350A4F52C2326D6001AAFA3 /* PeopleViewController.swift */; };
+		9350A4F82C232A13001AAFA3 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9350A4F72C232A13001AAFA3 /* PeopleViewModel.swift */; };
+		9350A4FB2C2330BE001AAFA3 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9350A4FA2C2330BE001AAFA3 /* MovieViewController.swift */; };
+		9350A4FD2C2330CC001AAFA3 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9350A4FC2C2330CC001AAFA3 /* MovieViewModel.swift */; };
+		9350A5002C234CB1001AAFA3 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9350A4FE2C234CB1001AAFA3 /* MovieTableViewCell.swift */; };
+		9350A5012C234CB1001AAFA3 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9350A4FF2C234CB1001AAFA3 /* MovieTableViewCell.xib */; };
+		9350A5032C2366D9001AAFA3 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9350A5022C2366D9001AAFA3 /* ArticleViewModel.swift */; };
+		9350A5072C236827001AAFA3 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9350A5052C236827001AAFA3 /* ArticleTableViewCell.swift */; };
+		9350A5082C236827001AAFA3 /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9350A5062C236827001AAFA3 /* ArticleTableViewCell.xib */; };
+		9350A50A2C236837001AAFA3 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9350A5092C236837001AAFA3 /* ArticleViewController.swift */; };
+		9350A50D2C2368A5001AAFA3 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9350A50C2C2368A5001AAFA3 /* MealViewController.swift */; };
+		9350A5102C2368B1001AAFA3 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9350A50E2C2368B1001AAFA3 /* MealTableViewCell.swift */; };
+		9350A5112C2368B1001AAFA3 /* MealTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9350A50F2C2368B1001AAFA3 /* MealTableViewCell.xib */; };
+		9350A5132C2370D3001AAFA3 /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9350A5122C2370D3001AAFA3 /* MealViewModel.swift */; };
 		93DC408A2C21D4800025D1CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DC40892C21D4800025D1CB /* AppDelegate.swift */; };
 		93DC408C2C21D4800025D1CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DC408B2C21D4800025D1CB /* SceneDelegate.swift */; };
 		93DC408E2C21D4800025D1CB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DC408D2C21D4800025D1CB /* HomeViewController.swift */; };
@@ -31,6 +45,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9350A4F52C2326D6001AAFA3 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		9350A4F72C232A13001AAFA3 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
+		9350A4FA2C2330BE001AAFA3 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		9350A4FC2C2330CC001AAFA3 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		9350A4FE2C234CB1001AAFA3 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		9350A4FF2C234CB1001AAFA3 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		9350A5022C2366D9001AAFA3 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		9350A5052C236827001AAFA3 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		9350A5062C236827001AAFA3 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
+		9350A5092C236837001AAFA3 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		9350A50C2C2368A5001AAFA3 /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
+		9350A50E2C2368B1001AAFA3 /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		9350A50F2C2368B1001AAFA3 /* MealTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealTableViewCell.xib; sourceTree = "<group>"; };
+		9350A5122C2370D3001AAFA3 /* MealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
 		93DC40862C21D4800025D1CB /* JsonTasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JsonTasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DC40892C21D4800025D1CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93DC408B2C21D4800025D1CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +95,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9350A4F42C232601001AAFA3 /* PeopleView */ = {
+			isa = PBXGroup;
+			children = (
+				9350A4F52C2326D6001AAFA3 /* PeopleViewController.swift */,
+			);
+			path = PeopleView;
+			sourceTree = "<group>";
+		};
+		9350A4F92C2330A7001AAFA3 /* MovieView */ = {
+			isa = PBXGroup;
+			children = (
+				9350A4FA2C2330BE001AAFA3 /* MovieViewController.swift */,
+				9350A4FE2C234CB1001AAFA3 /* MovieTableViewCell.swift */,
+				9350A4FF2C234CB1001AAFA3 /* MovieTableViewCell.xib */,
+			);
+			path = MovieView;
+			sourceTree = "<group>";
+		};
+		9350A5042C2367FC001AAFA3 /* ArticleView */ = {
+			isa = PBXGroup;
+			children = (
+				9350A5092C236837001AAFA3 /* ArticleViewController.swift */,
+				9350A5052C236827001AAFA3 /* ArticleTableViewCell.swift */,
+				9350A5062C236827001AAFA3 /* ArticleTableViewCell.xib */,
+			);
+			path = ArticleView;
+			sourceTree = "<group>";
+		};
+		9350A50B2C236896001AAFA3 /* MealView */ = {
+			isa = PBXGroup;
+			children = (
+				9350A50C2C2368A5001AAFA3 /* MealViewController.swift */,
+				9350A50E2C2368B1001AAFA3 /* MealTableViewCell.swift */,
+				9350A50F2C2368B1001AAFA3 /* MealTableViewCell.xib */,
+			);
+			path = MealView;
+			sourceTree = "<group>";
+		};
 		93DC407D2C21D4800025D1CB = {
 			isa = PBXGroup;
 			children = (
@@ -102,10 +168,14 @@
 		93DC409D2C21D5320025D1CB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				93DC40BB2C21E5750025D1CB /* UserView */,
+				9350A5042C2367FC001AAFA3 /* ArticleView */,
 				93DC40B42C21DF290025D1CB /* HomeView */,
-				93DC408F2C21D4800025D1CB /* Main.storyboard */,
+				9350A50B2C236896001AAFA3 /* MealView */,
+				9350A4F92C2330A7001AAFA3 /* MovieView */,
+				9350A4F42C232601001AAFA3 /* PeopleView */,
+				93DC40BB2C21E5750025D1CB /* UserView */,
 				93DC40942C21D4810025D1CB /* LaunchScreen.storyboard */,
+				93DC408F2C21D4800025D1CB /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,7 +183,11 @@
 		93DC409E2C21D5390025D1CB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9350A5022C2366D9001AAFA3 /* ArticleViewModel.swift */,
 				93DC40B92C21E3220025D1CB /* HomeViewModel.swift */,
+				9350A5122C2370D3001AAFA3 /* MealViewModel.swift */,
+				9350A4FC2C2330CC001AAFA3 /* MovieViewModel.swift */,
+				9350A4F72C232A13001AAFA3 /* PeopleViewModel.swift */,
 				93DC40B22C21DD030025D1CB /* UserViewModel.swift */,
 			);
 			path = ViewModel;
@@ -122,11 +196,11 @@
 		93DC409F2C21D53F0025D1CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				93DC40A22C21D5AD0025D1CB /* User.swift */,
-				93DC40A42C21D5F80025D1CB /* People.swift */,
-				93DC40A62C21D6B40025D1CB /* Movie.swift */,
 				93DC40A82C21D93D0025D1CB /* Article.swift */,
 				93DC40AA2C21DA940025D1CB /* Meal.swift */,
+				93DC40A62C21D6B40025D1CB /* Movie.swift */,
+				93DC40A42C21D5F80025D1CB /* People.swift */,
+				93DC40A22C21D5AD0025D1CB /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,9 +300,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9350A5112C2368B1001AAFA3 /* MealTableViewCell.xib in Resources */,
 				93DC40932C21D4810025D1CB /* Assets.xcassets in Resources */,
 				93DC40962C21D4810025D1CB /* Base in Resources */,
+				9350A5012C234CB1001AAFA3 /* MovieTableViewCell.xib in Resources */,
 				93DC40B72C21DF490025D1CB /* HomeTableViewCell.xib in Resources */,
+				9350A5082C236827001AAFA3 /* ArticleTableViewCell.xib in Resources */,
 				93DC40912C21D4800025D1CB /* Base in Resources */,
 				93DC40BE2C21E9040025D1CB /* UserTableViewCell.xib in Resources */,
 			);
@@ -241,19 +318,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9350A5102C2368B1001AAFA3 /* MealTableViewCell.swift in Sources */,
 				93DC40AB2C21DA940025D1CB /* Meal.swift in Sources */,
+				9350A50A2C236837001AAFA3 /* ArticleViewController.swift in Sources */,
 				93DC40C22C21E9370025D1CB /* UserViewController.swift in Sources */,
+				9350A5002C234CB1001AAFA3 /* MovieTableViewCell.swift in Sources */,
 				93DC40A92C21D93D0025D1CB /* Article.swift in Sources */,
 				93DC40B82C21DF490025D1CB /* HomeTableViewCell.swift in Sources */,
+				9350A4F82C232A13001AAFA3 /* PeopleViewModel.swift in Sources */,
 				93DC40A32C21D5AD0025D1CB /* User.swift in Sources */,
+				9350A5032C2366D9001AAFA3 /* ArticleViewModel.swift in Sources */,
 				93DC40BF2C21E9040025D1CB /* UserTableViewCell.swift in Sources */,
+				9350A5072C236827001AAFA3 /* ArticleTableViewCell.swift in Sources */,
 				93DC40AD2C21DBE40025D1CB /* APIManager.swift in Sources */,
 				93DC408E2C21D4800025D1CB /* HomeViewController.swift in Sources */,
 				93DC40AF2C21DC580025D1CB /* Constants.swift in Sources */,
 				93DC40A72C21D6B40025D1CB /* Movie.swift in Sources */,
+				9350A4FD2C2330CC001AAFA3 /* MovieViewModel.swift in Sources */,
+				9350A4F62C2326D6001AAFA3 /* PeopleViewController.swift in Sources */,
 				93DC408A2C21D4800025D1CB /* AppDelegate.swift in Sources */,
+				9350A4FB2C2330BE001AAFA3 /* MovieViewController.swift in Sources */,
 				93DC40BA2C21E3220025D1CB /* HomeViewModel.swift in Sources */,
 				93DC408C2C21D4800025D1CB /* SceneDelegate.swift in Sources */,
+				9350A50D2C2368A5001AAFA3 /* MealViewController.swift in Sources */,
+				9350A5132C2370D3001AAFA3 /* MealViewModel.swift in Sources */,
 				93DC40B12C21DC700025D1CB /* Extensions.swift in Sources */,
 				93DC40B32C21DD030025D1CB /* UserViewModel.swift in Sources */,
 				93DC40A52C21D5F80025D1CB /* People.swift in Sources */,

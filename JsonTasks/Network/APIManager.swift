@@ -22,9 +22,7 @@ class APIManager {
             }
             
             if let apiResponse = try? JSONDecoder().decode(T.self, from: data) {
-                DispatchQueue.main.async {
                     closure(apiResponse)
-                }
             }
         }.resume()
     }
