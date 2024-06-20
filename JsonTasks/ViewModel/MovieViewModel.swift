@@ -4,13 +4,12 @@ class MovieViewModel {
     private var movies = [Movie]()
     
     func fetchMovies(completion: @escaping () -> ()) {
-        APIManager.shared.fetchData(from: Constants.movieUrl.rawValue) { (data: [Movie]?) in
-            guard let receivedData = data else {
-                print(APIError.noDataError)
+        APIManager.shared.fetchData(from: Constants.movieUrl.rawValue) { data in
+            guard let apiResponse = try? JSONDecoder().decode([Movie].self, from: data) else {
+                print(APIError.decodingError)
                 return
             }
-            
-            self.movies = receivedData
+            self.movies = apiResponse
             completion()
         }
     }

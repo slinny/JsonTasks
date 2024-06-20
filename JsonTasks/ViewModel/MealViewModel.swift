@@ -4,12 +4,12 @@ class MealViewModel {
     private var meals = [Meal]()
     
     func fetchMeals(completion: @escaping () -> ()) {
-        APIManager.shared.fetchData(from: Constants.mealUrl.rawValue) { (data: Meals?) in
-            guard let receivedData = data else {
-                print(APIError.noDataError)
+        APIManager.shared.fetchData(from: Constants.mealUrl.rawValue) { data in
+            guard let apiResponse = try? JSONDecoder().decode(Meals.self, from: data) else {
+                print(APIError.decodingError)
                 return
             }
-            self.meals = receivedData.meals
+            self.meals = apiResponse.meals
             completion()
         }
     }
